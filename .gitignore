@@ -52,3 +52,11 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+
+# Keep copied web assets but ignore temporary files
+wwwroot/lib/
+copy-assets.js
