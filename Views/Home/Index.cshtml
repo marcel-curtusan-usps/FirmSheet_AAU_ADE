@@ -1,0 +1,59 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">FirmSheet AAU ADE</h1>
+    <p class="lead">Create Firm sheets for Carrier Routes and Return Merchandise</p>
+    
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Barcode Scanner</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Scan a single barcode to generate Arrival at Unit (AAU) and Acceptable Delivery Event (ADE) scans for all pieces associated with the firm sheet.</p>
+                    
+                    <div class="mb-3">
+                        <label for="barcodeInput" class="form-label">Enter or Scan Barcode:</label>
+                        <input type="text" class="form-control" id="barcodeInput" placeholder="Scan or enter barcode here">
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary" id="processBarcode">Process Barcode</button>
+                    <button type="button" class="btn btn-secondary ms-2" id="clearInput">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Carrier Routes</h5>
+                    <p class="card-text">Manage firm sheets for carrier routes and delivery assignments.</p>
+                    <button class="btn btn-outline-primary">View Routes</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Return Merchandise</h5>
+                    <p class="card-text">Handle return merchandise authorization and processing.</p>
+                    <button class="btn btn-outline-primary">Manage Returns</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Delivery Events</h5>
+                    <p class="card-text">Track and manage AAU and ADE scan events.</p>
+                    <button class="btn btn-outline-primary">View Events</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
