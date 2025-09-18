@@ -1,5 +1,8 @@
+
+using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+using FirmSheetApp.Models;
+
 
 namespace FirmSheetApp.Controllers;
 
@@ -14,17 +17,30 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        SetVersionInfo();
+
     }
 
     public IActionResult Privacy()
     {
+        SetVersionInfo();
+
         return View();
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
-        return View();
+
+        SetVersionInfo();
+        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+
+    private void SetVersionInfo()
+    {
+        var assembly = Assembly.GetExecutingAssembly();
+        ViewBag.AppName = assembly.GetCustomAttribute<AssemblyProductAttribute>()?.Product ?? "FirmSheetApp";
+        ViewBag.AppVersion = assembly.GetName().Version?.ToString(3) ?? "1.0.0";
     }
 }
+

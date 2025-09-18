@@ -1,0 +1,17 @@
+{
+  "name": "firmsheet-app",
+  "version": "1.0.0",
+  "description": "FirmSheet AAU ADE Application with SB Admin 2 Theme",
+  "scripts": {
+    "postinstall": "node copy-assets.js"
+  },
+  "dependencies": {
+    "startbootstrap-sb-admin-2": "^4.1.4",
+    "bootstrap": "^5.3.2",
+    "jquery": "^3.7.1",
+    "@fortawesome/fontawesome-free": "^6.4.2"
+  },
+  "devDependencies": {
+    "fs-extra": "^11.1.1"
+  }
+}
